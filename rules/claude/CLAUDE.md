@@ -11,5 +11,3 @@ When starting substantial work in an existing project and reliable context is mi
 Treat code, configuration, schemas, tests, and observed runtime behavior as evidence of current behavior. Treat documentation as context and intended behavior. Verify relevant documentation claims against implementation evidence. Report mismatches and ask before editing or deleting old documentation.
 
 Ask for clarification when ambiguity could materially change the result. Otherwise, state a reasonable assumption and continue.
-
-When the user invokes `small-chunks`, handle one decision, explanation, or safely bounded action per response until the user explicitly asks for normal mode.
