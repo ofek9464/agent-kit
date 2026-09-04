@@ -1,21 +1,76 @@
 # Agent kit
 
-This folder is one home for the reusable workflows you want Codex and Claude Code to share.
+Agent Kit gives Codex and Claude Code the same small, reusable workflows on every PC. GitHub stores the shared copy. The installer links each approved skill into both agents, so one pull updates both.
 
-You edit files here. GitHub keeps this folder the same on every PC. The installer then makes each agent see the same skills.
+The goal is simple: keep control of the process while giving agents reliable ways to clarify ideas, write specs, build, test, review, debug, teach, and hand work to another session.
 
-## The simple picture
+## How it works
 
 ```text
-GitHub repo -> one AgentKit folder on each PC -> Codex and Claude Code both read its skills
+                         GitHub
+                            |
+                         git pull
+                            |
+                     local Agent Kit
+                      /            \
+             Codex skills      Claude skills
+                      \            /
+                       same workflows
 ```
 
-There are two kinds of reusable files:
+Skills are small and composable. A starting skill may call a supporting skill, but the user still controls major workflow changes.
 
-- **Skills** teach an agent a repeatable job. Put approved skills in `skills/approved/<name>/SKILL.md` and drafts in `skills/experimental/<name>/SKILL.md`.
-- **MCP configuration** connects an agent to an outside tool, such as GitHub or Notion. Put safe templates in `mcp/`. Keep passwords and tokens out of this repo.
+```text
+rough idea
+   |
+   +-> grill-me ---------------------------> clear plan
+   |
+   +-> grill-with-docs -> grilling --------> decisions + project language
+                                      |
+                                      v
+discussion -> to-spec -> implement -> tdd -> code-review
+                  |
+                  +-> prototype, when a quick experiment is more useful
+```
 
-`rules/` contains short text you can add to Codex or Claude Code when a preference should apply in every conversation. A skill being installed does not force it to run every time. A rule does.
+The repository has three reusable parts:
+
+- `skills/approved/` contains reviewed skills installed into both agents.
+- `skills/experimental/` holds drafts that the installer ignores.
+- `rules/` contains short instructions that should apply in every conversation.
+- `mcp/` contains safe configuration templates for outside tools. Credentials stay out of Git.
+
+## Toolbox
+
+| Skill | What it does | How it starts |
+| --- | --- | --- |
+| `choose-workflow` | Recommends the right workflow without starting it | Ask which workflow fits |
+| `grill-me` | Questions a rough idea until the important choices are clear | Manual |
+| `grill-with-docs` | Clarifies a project idea and records terms and decisions | Manual |
+| `to-spec` | Turns an agreed discussion into a buildable specification | Manual |
+| `prototype` | Builds a disposable experiment to answer a design question | Manual |
+| `implement` | Builds an approved spec, tests it, and reviews the result | Manual |
+| `diagnosing-bugs` | Reproduces broken or slow behavior and traces its cause | Automatic when the task fits |
+| `handoff` | Records enough state for another session or agent to continue | Manual |
+| `course-teacher` | Runs a multi-session course in a separate learning folder | Manual |
+| `codebase-teacher` | Explains an existing project or change | Manual |
+
+Supporting skills such as `grilling`, `how`, `tdd`, `code-review`, and `domain-modeling` provide the reusable steps behind those workflows. `writing-for-agents` handles agent-facing instructions. `unslop` cleans up user-facing prose automatically.
+
+See the [approved skill catalog](skills/approved/choose-workflow/references/catalog.md) for every skill, its trigger, and what may call it.
+
+## Using a skill
+
+Ask naturally or name the skill directly:
+
+```text
+Use choose-workflow. I have a rough app idea. What should I start with?
+Use grill-with-docs to question me about this feature.
+Use to-spec to turn our agreed plan into a specification.
+Use implement on the approved specification.
+```
+
+Naming a manual skill starts it. Asking `choose-workflow` only gives a recommendation and waits for approval.
 
 ## First use on a PC
 
@@ -38,6 +93,4 @@ Run `git pull` inside this folder. You do not need to rerun the installer unless
 
 Only folders under `skills/approved/` are installed. Drafts stay under `skills/experimental/` until you review them.
 
-`choose-workflow` is the first approved skill. Its [catalog](skills/approved/choose-workflow/references/catalog.md) records every planned skill, how it starts, what calls it, and why it exists.
-
-The two reference repositories are inputs for discussion. Their skills are not copied into this kit automatically.
+The workflows were selected and adapted from ideas in [Matt Pocock's skills](https://github.com/mattpocock/skills) and the [Cursor pstack plugin](https://github.com/cursor/plugins/tree/main/pstack/skills). See [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and licenses.
