@@ -1,6 +1,6 @@
 # Agent kit
 
-Agent Kit gives Codex and Claude Code the same small, reusable workflows on every PC. GitHub stores the shared copy. The installer links each approved skill into both agents, so one pull updates both.
+Agent Kit gives Codex and Claude Code the same skills on every PC. GitHub stores the shared copy. The installer links each approved skill into both agents, so one pull updates both.
 
 The goal is simple: keep control of the process while giving agents reliable ways to clarify ideas, write specs, build, test, review, debug, teach, and hand work to another session.
 
@@ -15,10 +15,12 @@ The goal is simple: keep control of the process while giving agents reliable way
                       /            \
              Codex skills      Claude skills
                       \            /
-                       same workflows
+                         same skills
 ```
 
-Skills are small and composable. A starting skill may call a supporting skill, but the user still controls major workflow changes.
+A **skill** is an instruction package stored in a `SKILL.md` file. A **workflow** is the sequence of steps an agent follows. Some skills contain a complete workflow. Others provide one supporting part.
+
+User-started skills begin only when you name or approve them. They may call supporting skills, but you still control major changes to the work.
 
 ```text
 rough idea
@@ -33,7 +35,7 @@ discussion -> to-spec -> implement -> tdd -> code-review
                   +-> prototype, when a quick experiment is more useful
 ```
 
-The repository has three reusable parts:
+The repository has four reusable parts:
 
 - `skills/approved/` contains reviewed skills installed into both agents.
 - `skills/experimental/` holds drafts that the installer ignores.
@@ -42,20 +44,19 @@ The repository has three reusable parts:
 
 ## Toolbox
 
-| Skill | What it does | How it starts |
-| --- | --- | --- |
-| `choose-workflow` | Recommends the right workflow without starting it | Ask which workflow fits |
-| `grill-me` | Questions a rough idea until the important choices are clear | Manual |
-| `grill-with-docs` | Clarifies a project idea and records terms and decisions | Manual |
-| `to-spec` | Turns an agreed discussion into a buildable specification | Manual |
-| `prototype` | Builds a disposable experiment to answer a design question | Manual |
-| `implement` | Builds an approved spec, tests it, and reviews the result | Manual |
-| `diagnosing-bugs` | Reproduces broken or slow behavior and traces its cause | Automatic when the task fits |
-| `handoff` | Records enough state for another session or agent to continue | Manual |
-| `course-teacher` | Runs a multi-session course in a separate learning folder | Manual |
-| `codebase-teacher` | Explains an existing project or change | Manual |
+| User-started skill | What it does |
+| --- | --- |
+| `grill-me` | Questions a rough idea until the important choices are clear |
+| `grill-with-docs` | Clarifies a project idea and records terms and decisions |
+| `to-spec` | Turns an agreed discussion into a buildable specification |
+| `prototype` | Builds a disposable experiment to answer a design question |
+| `implement` | Builds an approved spec, tests it, and reviews the result |
+| `handoff` | Records enough state for another session or agent to continue |
+| `course-teacher` | Runs a multi-session course in a separate learning folder |
+| `codebase-teacher` | Explains an existing project or change |
+| `domain-modeling` | Defines project terms and records durable decisions |
 
-Supporting skills such as `grilling`, `how`, `tdd`, `code-review`, and `domain-modeling` provide the reusable steps behind those workflows. `writing-for-agents` handles agent-facing instructions. `unslop` cleans up user-facing prose automatically.
+`choose-workflow` is the router. It recommends a user-started skill and waits for your approval. Supporting skills such as `grilling`, `how`, `tdd`, and `code-review` provide reusable steps. `diagnosing-bugs` and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically.
 
 See the [approved skill catalog](skills/approved/choose-workflow/references/catalog.md) for every skill, its trigger, and what may call it.
 
@@ -70,7 +71,7 @@ Use to-spec to turn our agreed plan into a specification.
 Use implement on the approved specification.
 ```
 
-Naming a manual skill starts it. Asking `choose-workflow` only gives a recommendation and waits for approval.
+Naming a user-started skill begins its workflow. Asking `choose-workflow` only gives a recommendation and waits for approval.
 
 ## First use on a PC
 
