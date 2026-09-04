@@ -1,0 +1,7 @@
+interface:
+  display_name: "To spec"
+  short_description: "Turn settled discussion into a specification"
+  default_prompt: "Use $to-spec to turn our agreed discussion into a local implementation specification."
+
+policy:
+  allow_implicit_invocation: false

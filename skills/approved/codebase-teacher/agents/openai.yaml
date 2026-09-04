@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codebase teacher"
+  short_description: "Explain an existing codebase at your pace"
+  default_prompt: "Use $codebase-teacher to teach me how this part of the project works."
+
+policy:
+  allow_implicit_invocation: false

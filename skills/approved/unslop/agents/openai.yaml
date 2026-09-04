@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unslop"
+  short_description: "Remove stock AI phrasing from prose"
+  default_prompt: "Use $unslop to tighten this writing without changing its meaning."
+
+policy:
+  allow_implicit_invocation: false

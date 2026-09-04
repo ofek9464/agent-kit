@@ -1,0 +1,7 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Prepare work for another session or agent"
+  default_prompt: "Use $handoff to prepare this work for a fresh session."
+
+policy:
+  allow_implicit_invocation: false

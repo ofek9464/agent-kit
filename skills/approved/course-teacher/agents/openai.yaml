@@ -1,0 +1,7 @@
+interface:
+  display_name: "Course teacher"
+  short_description: "Run a persistent course in its own folder"
+  default_prompt: "Use $course-teacher to teach me this topic across multiple sessions."
+
+policy:
+  allow_implicit_invocation: false

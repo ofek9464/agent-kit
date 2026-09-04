@@ -1,0 +1,7 @@
+interface:
+  display_name: "Grill with docs"
+  short_description: "Settle a design and record its decisions"
+  default_prompt: "Use $grill-with-docs to interview me about this project idea and record the decisions."
+
+policy:
+  allow_implicit_invocation: false
