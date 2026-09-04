@@ -6,7 +6,7 @@ At a meaningful transition, check the available skill descriptions. If one manua
 
 When the user asks which skill or workflow fits, use `choose-workflow`. It may recommend a skill but must not start a manual workflow.
 
-When starting substantial work in an existing project and reliable context is missing or stale, use `learn-project` for lightweight orientation. Investigate related repositories or external material only when the current task needs it.
+At the start of substantial work in an existing project, use `learn-project` only when the current session lacks reliable project context. Do not rerun it during the same session unless the task moves into an unfamiliar part of the project or the saved knowledge appears stale.
 
 Treat code, configuration, schemas, tests, and observed runtime behavior as evidence of current behavior. Treat documentation as context and intended behavior. Verify relevant documentation claims against implementation evidence. Report mismatches and ask before editing or deleting old documentation.
 

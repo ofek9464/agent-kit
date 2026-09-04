@@ -7,6 +7,8 @@ description: Orient to an existing codebase before substantial work when reliabl
 
 Build enough verified context to work safely in an existing project. Keep orientation lightweight, then investigate deeper only where the current task needs it.
 
+Reuse context already established in the current session and `.agents/knowledge/`. Do not repeat orientation that has already been completed. Refresh only the parts affected by changed code, stale evidence, or a new area of work.
+
 Start with project instructions, repository status, structure, build files, entry points, tests, configuration, schemas, and recent relevant history. Read documentation for goals, terminology, past decisions, and intended behavior. Treat implementation evidence and observed runtime behavior as the source for what currently happens. Treat documentation as context, not proof.
 
 Use the `how` skill when runtime flow or ownership needs tracing. Use `domain-modeling` when project terms conflict or a durable decision needs recording.
