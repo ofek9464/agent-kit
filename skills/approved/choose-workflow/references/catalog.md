@@ -46,6 +46,10 @@ Explains an existing project or change. Calls `how`; a future version may call `
 
 Sharpens project terminology and records durable decisions. `grill-with-docs` may call it, and the user may invoke it directly.
 
+### small-chunks
+
+Switches the conversation to one user-paced increment at a time. It stays active until the user explicitly asks for normal mode.
+
 ## Supporting skills
 
 ### grilling
@@ -65,6 +69,10 @@ Uses a failing test before implementation when a cheap, meaningful test path exi
 Reviews changes against project standards and the approved request. `implement` calls it after building, and the user may invoke it directly.
 
 ## Automatically selected
+
+### learn-project
+
+Builds lightweight, verified context before substantial work in an existing project. It studies related repositories and authoritative external material only when the current task needs them, and stores maintained knowledge locally outside Git tracking.
 
 ### diagnosing-bugs
 

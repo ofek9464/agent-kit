@@ -1,0 +1,7 @@
+interface:
+  display_name: "Small chunks"
+  short_description: "Work through the conversation one small step at a time"
+  default_prompt: "Use $small-chunks for the rest of this conversation."
+
+policy:
+  allow_implicit_invocation: false

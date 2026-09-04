@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learn project"
+  short_description: "Build verified context for an existing project"
+  default_prompt: "Use $learn-project to orient to this existing project before working on it."
