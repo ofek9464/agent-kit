@@ -42,6 +42,19 @@ The repository has four reusable parts:
 - `rules/` contains short instructions that should apply in every conversation.
 - `mcp/` contains safe configuration templates for outside tools. Credentials stay out of Git.
 
+## Rules the agents follow
+
+The framework includes shared working rules for Codex and Claude Code. They tell the agent to:
+
+- Write clear, natural prose while preserving your meaning, tone, and formatting.
+- Suggest one useful next skill when it would help, using the framework list and available project or plugin skills. A suggestion does not start a manual workflow.
+- Learn an unfamiliar project before substantial work and reuse context already established.
+- Check documentation against code, tests, and observed behavior instead of treating it as proof.
+- Keep its knowledge notes current, update project documentation within the scope you authorized, and respect read-only requests.
+- Ask when an answer would materially change the result. Otherwise state a reasonable assumption, continue, and remember permission already given.
+
+Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/claude/CLAUDE.md). The installer adds them to each agent's personal instruction file.
+
 ## Toolbox
 
 | User-started skill | What it does |
@@ -78,7 +91,10 @@ Use small-chunks for the rest of this conversation.
 
 Naming a user-started skill begins its workflow. Asking `choose-workflow` only gives a recommendation and waits for approval.
 
-## First use on a PC
+<details>
+<summary>Technical reference for AI agents</summary>
+
+### First use on a PC
 
 1. Install Codex and Claude Code normally.
 2. Clone this repository somewhere stable, for example `C:\AgentKit`.
@@ -91,7 +107,7 @@ Naming a user-started skill begins its workflow. Asking `choose-workflow` only g
    This creates links in each agent's personal skill folder. The skills remain in this Git repository, so pulling updates changes what both tools use.
 4. Add MCP servers through their normal login flow. The config template helps you keep names and non-secret settings consistent.
 
-## Updating
+### Updating
 
 Run `git pull` inside this folder to update linked skills. Rerun `scripts/install.ps1` when approved skills or global rules change; rules are copied into each agent's instruction file.
 
@@ -99,12 +115,14 @@ Run `scripts/install.ps1 -StatusOnly` to check installed links, copies, missing 
 
 Keep the checkout in a stable folder. Moving or deleting it breaks installed links.
 
-## Checking changes
+### Checking changes
 
 Run `tests/install.ps1` in PowerShell 7 to exercise installation and status checks in isolated temporary profiles. The fixtures remain in the printed temporary folder for inspection. Use [the workflow prompts](tests/workflow-prompts.md) for manual routing and permission checks in each agent.
 
-## Skill approval
+### Skill approval
 
 Only folders under `skills/approved/` are installed. Drafts stay under `skills/experimental/` until you review them.
 
 The workflows were selected and adapted from ideas in [Matt Pocock's skills](https://github.com/mattpocock/skills) and the [Cursor pstack plugin](https://github.com/cursor/plugins/tree/main/pstack/skills). See [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and licenses.
+
+</details>
