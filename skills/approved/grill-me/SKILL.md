@@ -9,6 +9,6 @@ Use the `grilling` skill to expose and settle every material branch of the user'
 
 This is the stateless version. Do not create or edit project glossaries, decision records, specifications, or implementation files.
 
-When the interview finishes, summarize the agreed decisions and unresolved items. Ask the user to confirm that shared understanding was reached.
+Use the final summary and single confirmation from `grilling`; do not repeat them.
 
-Completion means the decision frontier is empty and the user has confirmed the summary.
+Completion follows `grilling`, with no project files changed.

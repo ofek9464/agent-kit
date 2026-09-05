@@ -1,13 +1,23 @@
+#requires -Version 7.0
 [CmdletBinding()]
 param(
     [ValidateSet('Codex', 'Claude', 'All')]
     [string]$Target = 'All',
 
     [ValidateSet('Link', 'Copy')]
-    [string]$Mode = 'Link'
+    [string]$Mode = 'Link',
+
+    [switch]$StatusOnly,
+
+    [string]$ProfileRoot = $env:USERPROFILE
 )
 
 $kitRoot = Split-Path -Parent $PSScriptRoot
+if ($StatusOnly) {
+    & (Join-Path $PSScriptRoot 'status.ps1') -Target $Target -ProfileRoot $ProfileRoot -KitRoot $kitRoot
+    return
+}
+$ErrorActionPreference = 'Stop'
 $skillSource = Join-Path $kitRoot 'skills\approved'
 
 if (-not (Test-Path -LiteralPath $skillSource -PathType Container)) {
@@ -16,10 +26,10 @@ if (-not (Test-Path -LiteralPath $skillSource -PathType Container)) {
 
 $targets = @()
 if ($Target -in @('Codex', 'All')) {
-    $targets += [PSCustomObject]@{ Name = 'Codex'; Path = Join-Path $env:USERPROFILE '.codex\skills' }
+    $targets += [PSCustomObject]@{ Name = 'Codex'; Path = Join-Path $ProfileRoot '.codex\skills' }
 }
 if ($Target -in @('Claude', 'All')) {
-    $targets += [PSCustomObject]@{ Name = 'Claude Code'; Path = Join-Path $env:USERPROFILE '.claude\skills' }
+    $targets += [PSCustomObject]@{ Name = 'Claude Code'; Path = Join-Path $ProfileRoot '.claude\skills' }
 }
 
 $skills = Get-ChildItem -LiteralPath $skillSource -Directory
@@ -35,7 +45,7 @@ foreach ($destination in $targets) {
 
         $targetPath = Join-Path $destination.Path $skill.Name
         if (Test-Path -LiteralPath $targetPath) {
-            Write-Host "$($destination.Name): $($skill.Name) already exists, left unchanged."
+            Write-Host "$($destination.Name): $($skill.Name) already exists, left unchanged. Use -StatusOnly to compare it."
             continue
         }
 
@@ -66,7 +76,7 @@ function Install-RuleBlock {
         $existing = Get-Content -Raw -LiteralPath $RuleTarget
         $pattern = [regex]::Escape($begin) + '[\s\S]*?' + [regex]::Escape($end)
         if ($existing -match $pattern) {
-            $updated = [regex]::Replace($existing, $pattern, $block)
+            $updated = [regex]::Replace($existing, $pattern, [System.Text.RegularExpressions.MatchEvaluator]{ param($match) $block })
         } else {
             $updated = $existing.TrimEnd() + "`r`n`r`n" + $block + "`r`n"
         }
@@ -74,15 +84,15 @@ function Install-RuleBlock {
         $updated = $block + "`r`n"
     }
 
-    Set-Content -LiteralPath $RuleTarget -Value $updated -Encoding utf8NoBOM
+    Set-Content -LiteralPath $RuleTarget -Value $updated -Encoding utf8NoBOM -NoNewline
 }
 
 if ($Target -in @('Codex', 'All')) {
-    Install-RuleBlock -RuleSource (Join-Path $kitRoot 'rules\codex\AGENTS.md') -RuleTarget (Join-Path $env:USERPROFILE '.codex\AGENTS.md')
+    Install-RuleBlock -RuleSource (Join-Path $kitRoot 'rules\codex\AGENTS.md') -RuleTarget (Join-Path $ProfileRoot '.codex\AGENTS.md')
     Write-Host 'Codex: installed AgentKit rules.'
 }
 if ($Target -in @('Claude', 'All')) {
-    Install-RuleBlock -RuleSource (Join-Path $kitRoot 'rules\claude\CLAUDE.md') -RuleTarget (Join-Path $env:USERPROFILE '.claude\CLAUDE.md')
+    Install-RuleBlock -RuleSource (Join-Path $kitRoot 'rules\claude\CLAUDE.md') -RuleTarget (Join-Path $ProfileRoot '.claude\CLAUDE.md')
     Write-Host 'Claude Code: installed AgentKit rules.'
 }
 

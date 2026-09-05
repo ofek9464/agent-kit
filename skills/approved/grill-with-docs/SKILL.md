@@ -11,6 +11,6 @@ Before the first round, inspect existing `CONTEXT.md`, `CONTEXT-MAP.md`, and rel
 
 After each answer, let `domain-modeling` update the glossary when a project-specific term has become clear. Offer a decision record only when the choice is hard to reverse, surprising without context, and based on a real tradeoff.
 
-Do not implement the plan during this skill. When the decision tree has no open branches, summarize the agreed design, list the documentation changed, and ask the user to confirm that shared understanding was reached.
+Record only decisions the user has accepted, not your unanswered recommendations. Do not implement the plan. Add the documentation changed to `grilling`'s final summary and use its single confirmation.
 
-Completion means every material branch has been discussed, the project documentation reflects settled terms and durable decisions, and the user has confirmed the result.
+Completion follows `grilling`, and the project documentation reflects only settled terms and durable decisions.

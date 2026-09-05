@@ -11,6 +11,6 @@ Begin with a short plain definition. Then explain the runtime flow, ownership bo
 
 Use a small diagram when three or more moving parts are hard to follow in prose. Build complicated diagrams in stages.
 
-Keep the exchange conversational. Give the smallest complete explanation first and deepen it through follow-up questions. Do not modify the code.
+Keep the exchange conversational. Give the smallest complete explanation first, then use a short example or comprehension check when it would help. Deepen the explanation through follow-up questions. Do not modify the code.
 
 Completion means the user has a working mental model of the requested area and knows where to look next.

@@ -12,11 +12,12 @@ Include:
 - the goal and current state
 - decisions already settled
 - verified facts and evidence pointers
-- files, branches, issues, or artifacts involved
+- working directory, branch and commit, uncommitted changes, and relevant artifacts
+- exact validation commands and results, plus actions already authorized by the user
 - unresolved questions and blockers
 - the next concrete action
 - suggested skills for the next session
 
-Reference existing specifications, decision records, commits, and diffs instead of copying them. Remove secrets, tokens, personal information, and irrelevant conversation history.
+Reference existing specifications, decision records, commits, and diffs instead of copying them. Remove secrets, tokens, unnecessary personal information, and irrelevant conversation history.
 
 Completion means a fresh agent can continue without rereading the original conversation or guessing what remains.

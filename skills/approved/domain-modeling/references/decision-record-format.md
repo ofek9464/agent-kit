@@ -1,6 +1,6 @@
 # Decision-record format
 
-Store decision records under `docs/adr/` using the next available four-digit number and a short lowercase filename.
+Follow the project's existing decision-record convention. Otherwise use `docs/adr/` with the next available four-digit number and a short lowercase filename.
 
 ```md
 # Short decision title

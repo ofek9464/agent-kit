@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Workflow builder
 
-Build one focused workflow that Codex and Claude Code can both use.
+Build one focused workflow that Codex and Claude Code can both use. Use `writing-for-agents` for instruction design and the host skill creator for packaging when needed; keep this skill focused on the reusable workflow.
 
 Start by naming the repeated problem in plain language. Ask only for decisions that change the workflow. If an example skill was supplied, extract its useful behavior without copying tool-specific assumptions, secrets, or instructions that depend on unavailable tools.
 

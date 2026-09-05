@@ -10,4 +10,4 @@ Keep `.agents/knowledge/` small and maintained. Create only files that hold usef
 
 Every claim that could become stale should include its evidence and the date checked. Evidence may be a repository path and symbol, commit, test, observed command result, related repository link, or authoritative external source.
 
-Revise or remove stale knowledge when better evidence is found. This permission applies only to `.agents/knowledge/`. Report contradictions in project documentation and ask before editing or deleting those files.
+Revise or remove stale knowledge when better evidence is found. This permission applies only to `.agents/knowledge/`. Correct other project documentation within the user's authorized scope; otherwise report the contradiction and proposed correction first.

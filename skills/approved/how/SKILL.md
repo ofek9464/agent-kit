@@ -17,6 +17,6 @@ Explain:
 - where the main pieces live
 - non-obvious behavior or sharp edges
 
-Reference specific files and symbols. Include code only when a short excerpt explains the mechanism better than prose.
+Reference specific files and symbols. Distinguish behavior inferred from code from behavior observed during execution. Include code only when a short excerpt explains the mechanism better than prose.
 
 Completion means the explanation covers the full path relevant to the question without guessing over a missing step.

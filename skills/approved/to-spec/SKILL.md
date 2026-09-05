@@ -16,7 +16,7 @@ Include:
 - implementation decisions and affected modules, without brittle line-level instructions
 - testing seams and acceptance checks
 - boundaries and out-of-scope work
-- unresolved questions, if any
+- unresolved questions, marking which block implementation and which can wait
 
 Use the project's glossary and respect existing decision records. Show the destination before writing when the target is unclear.
 

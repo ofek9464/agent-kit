@@ -5,7 +5,7 @@ description: Review a diff or branch against project standards and its originati
 
 # Code review
 
-Establish the comparison point before reviewing. Use the base branch, merge base, commit, or explicit diff supplied by the user.
+Establish the comparison point before reviewing. Use the supplied base branch, merge base, commit, or diff. Otherwise inspect repository state, state the comparison you chose, and ask only if different choices would materially change the review.
 
 Review two questions separately:
 

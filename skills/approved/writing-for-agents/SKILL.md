@@ -19,4 +19,4 @@ For a skill:
 
 Keep each meaning in one authoritative place. Remove stale facts, duplicated rules, generic advice, and instructions the agent already follows. Prefer positive target behavior over long lists of prohibitions.
 
-After editing, validate the skill format and inspect every reference path. Completion means the trigger is discriminating, the workflow is executable, and success can be checked.
+After editing, validate the skill format, reference paths, and required skills or tools. Check one prompt that should activate it and one nearby prompt that should not, including what may be written and when to stop. Completion means the trigger is discriminating, the workflow is executable, and success can be checked.

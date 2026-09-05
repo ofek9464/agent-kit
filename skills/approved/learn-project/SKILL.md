@@ -17,8 +17,10 @@ Follow task-relevant links to accessible related repositories, issue history, ve
 
 Store reusable findings locally under `.agents/knowledge/`. Before writing there, read [the knowledge format](references/knowledge-format.md). Apply `writing-for-agents` whenever creating or updating these files. Update existing knowledge instead of creating a new summary for every run.
 
-If the project is a Git repository, add `.agents/knowledge/` to `.git/info/exclude` when it is not already covered. Never add, commit, or push the knowledge folder. Do not store secrets, credentials, personal data, or machine-specific values.
+If the project is a Git repository, resolve the local exclusion file with `git rev-parse --git-path info/exclude` and exclude `.agents/knowledge/` when needed. Never add, commit, or push the knowledge folder. Do not store secrets, credentials, personal data, or machine-specific values.
 
-When documentation conflicts with implementation evidence, record the mismatch with file references. Report it to the user and ask before editing or deleting the documentation.
+Maintain your knowledge notes as findings change, including removing stale material. When project documentation conflicts with implementation evidence, record the mismatch with file references. Correct it when the user has authorized documentation maintenance; otherwise report the proposed correction before editing or deleting it. Do not change unrelated project files during orientation.
+
+Only when the user requests read-only work, keep findings in the response and skip all file and Git configuration writes.
 
 Completion means the agent can explain the task-relevant system flow, identify remaining uncertainty, and trace saved claims to evidence.

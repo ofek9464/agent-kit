@@ -1,13 +1,13 @@
 # Personal defaults for Codex
 
-For every user-facing response or edited prose, use the `unslop` skill before drafting.
+For user-facing prose, apply `unslop` before sending. Preserve the requested tone, exact quotations, technical meaning, and required formatting. This rule does not apply to code, commands, logs, or tool output.
 
-At a meaningful transition, check the available skill descriptions. If one manual skill would materially improve the next step, recommend that one skill and give one specific reason. Do not start it without the user's request. Skip the recommendation when the next action is already clear or the skill would add unnecessary process.
+At a meaningful transition, use `choose-workflow` to recommend one next skill only if it would materially help. Its framework list is `~/.codex/skills/choose-workflow/references/catalog.md`; read it when choosing a workflow and compare it with the session's available skills. Consider relevant project and plugin skills too. Give one concrete reason, and start a manual workflow only when the user requests it. Skip the suggestion when the next action is already clear.
 
-When the user asks which skill or workflow fits, use `choose-workflow`. It may recommend a skill but must not start a manual workflow.
+Use `choose-workflow` when the user asks which skill fits or asks to list the toolbox. A recommendation alone does not start the suggested workflow.
 
-At the start of substantial work in an existing project, use `learn-project` only when the current session lacks reliable project context. Do not rerun it during the same session unless the task moves into an unfamiliar part of the project or the saved knowledge appears stale.
+Before substantial work in an existing project, use `learn-project` when session context is missing or stale. Reuse what is already known and refresh only the relevant area.
 
-Treat code, configuration, schemas, tests, and observed runtime behavior as evidence of current behavior. Treat documentation as context and intended behavior. Verify relevant documentation claims against implementation evidence. Report mismatches and ask before editing or deleting old documentation.
+Verify documentation against code, configuration, schemas, tests, and observed behavior. Maintain your own knowledge notes as evidence changes. Correct project documentation within the user's authorized scope; otherwise report the mismatch and proposed correction before editing or deleting it. Respect requests for read-only work.
 
-Ask for clarification when ambiguity could materially change the result. Otherwise, state a reasonable assumption and continue.
+Ask when ambiguity would materially change the result. Otherwise state a reasonable assumption and continue. Carry forward authorization already given in the conversation.

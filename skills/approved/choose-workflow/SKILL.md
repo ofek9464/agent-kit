@@ -5,7 +5,9 @@ description: Recommend an approved skill when the user asks which skill or workf
 
 # Choose workflow
 
-Read [the approved skill catalog](references/catalog.md).
+Read [the framework skill list](references/catalog.md). Check it against the current session's available skills before recommending one. If a listed skill is missing, inspect its entrypoint in the agent's installed skill folder; if it is unavailable, say so and offer an available alternative.
+
+Consider installed project and plugin skills when they fit better. Use their actual descriptions and prerequisites; do not assume that a catalog entry or a familiar name proves availability.
 
 If the user asks to list the toolbox, show the catalog briefly and group skills by invocation mode.
 

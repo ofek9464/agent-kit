@@ -1,89 +1,31 @@
-# Approved skill catalog
+# Framework skill list
 
-This catalog describes the approved toolbox. Every listed skill has been implemented in AgentKit.
+This is the maintained list of approved Agent Kit skills. Manual skills start when the user requests them. Supporting skills can be called directly or used within authorized work. Check actual availability before making a recommendation.
 
-## Always on
+| Skill | When it helps | Starts |
+| --- | --- | --- |
+| `unslop` | Make user-facing prose clear and natural | Global writing rule |
+| `choose-workflow` | Choose a next skill or list the toolbox | Workflow questions |
+| `learn-project` | Build or refresh context before substantial project work | Missing or stale context |
+| `diagnosing-bugs` | Reproduce a failure and trace its cause | Bug reports or diagnosis requests |
+| `writing-for-agents` | Create or revise instructions and skills | Agent-facing writing |
+| `grill-me` | Settle an idea without writing project files | Manual; uses `grilling` |
+| `grill-with-docs` | Settle a project design and record agreed decisions | Manual; uses `grilling`, `domain-modeling` |
+| `to-spec` | Turn settled requirements into an implementation specification | Manual |
+| `to-tasks` | Break agreed requirements into tasks with dependencies and checks | Task breakdown requests |
+| `prototype` | Answer one design question with a disposable demo | Manual |
+| `implement` | Build, check, and review an approved request | Manual; uses `tdd` when useful, then `code-review` |
+| `handoff` | Prepare another session or person to continue | Manual |
+| `course-teacher` | Teach across sessions with a learning record | Manual |
+| `codebase-teacher` | Teach how project code works at the user's pace | Manual; uses `how` |
+| `small-chunks` | Work one user-paced step at a time | Manual; stays active until the user exits |
+| `domain-modeling` | Clarify project terms and record settled design choices | Supporting; vague terms or documentation work |
+| `grilling` | Work through dependent decisions in question rounds | Supporting; interview requests |
+| `how` | Trace a code or data flow with file evidence | Supporting; explanation requests |
+| `why` | Explain past design choices using history and evidence | Supporting; questions about decisions |
+| `tdd` | Develop behavior through a meaningful failing test | Supporting; TDD requests or suitable regression tests |
+| `code-review` | Check a diff against the request and project standards | Supporting; review requests |
 
-### unslop
+For skills outside this list, use the current session's project and plugin skill descriptions. Missing from the session list does not prove uninstalled; inspect an installed entrypoint when necessary. Treat unavailable skills as setup options, not runnable recommendations.
 
-Makes user-facing writing direct and natural. The global rule invokes it for prose. The user does not call it.
-
-## Manual starting points
-
-### grill-me
-
-Interviews the user to sharpen an idea outside a project. Calls `grilling`. Saves no project documentation.
-
-### grill-with-docs
-
-Interviews the user inside a project and records terminology and decisions. Calls `grilling` and may call `domain-modeling`.
-
-### to-spec
-
-Turns an agreed conversation into a specification. Use when the important questions have been answered.
-
-### prototype
-
-Builds disposable code or UI to answer a design question. Use when discussion alone cannot settle the decision.
-
-### implement
-
-Builds an approved specification or ticket. It may call `tdd` and ends with `code-review`. It must not commit unless the user requests it.
-
-### handoff
-
-Writes a compact state document for another session, agent, person, or working directory.
-
-### course-teacher
-
-Runs a multi-session course in a dedicated learning directory. It keeps the mission, lessons, resources, and learning record outside software projects.
-
-### codebase-teacher
-
-Explains an existing project or change. Calls `how`; a future version may call `why` after that skill is reviewed and approved.
-
-### domain-modeling
-
-Sharpens project terminology and records durable decisions. `grill-with-docs` may call it, and the user may invoke it directly.
-
-### small-chunks
-
-Switches the conversation to one user-paced increment at a time. It stays active until the user explicitly asks for normal mode.
-
-## Supporting skills
-
-### grilling
-
-Runs the interview used by `grill-me` and `grill-with-docs`. Those starting skills call it; the user normally does not.
-
-### how
-
-Traces how a codebase or subsystem works. `codebase-teacher` calls it, and the user may invoke it directly.
-
-### tdd
-
-Uses a failing test before implementation when a cheap, meaningful test path exists. `implement` may call it, and the user may invoke it directly.
-
-### code-review
-
-Reviews changes against project standards and the approved request. `implement` calls it after building, and the user may invoke it directly.
-
-## Automatically selected
-
-### learn-project
-
-Builds lightweight, verified context before substantial work in an existing project. It studies related repositories and authoritative external material only when the current task needs them, and stores maintained knowledge locally outside Git tracking.
-
-### diagnosing-bugs
-
-Builds a reproduction and traces the cause of broken, failing, incorrect, or slow behavior before fixing it.
-
-### writing-for-agents
-
-Guides creation and editing of skills, `AGENTS.md`, `CLAUDE.md`, and documents written for agents.
-
-## Router
-
-### choose-workflow
-
-Reads this catalog and recommends one skill when the user asks which workflow fits. It can also list the toolbox. It never starts a manual workflow.
+Keep this table aligned with `skills/approved/` when skills are added, renamed, removed, or change invocation mode. Experimental drafts are not installed.
