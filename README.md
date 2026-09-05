@@ -58,6 +58,8 @@ The repository has four reusable parts:
 
 `choose-workflow` is the router. It recommends a user-started skill and waits for your approval. Supporting skills such as `domain-modeling`, `grilling`, `how`, `why`, `tdd`, and `code-review` provide reusable steps. `learn-project`, `diagnosing-bugs`, and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically. Ask `to-tasks` to split an agreed specification into tasks before implementation when the work needs a breakdown.
 
+[clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for long-document structure, avoiding repetition, and Hebrew/English Word layout. Formatted documents must be rendered and every page visually inspected before delivery; use the relevant document or PDF tools for those checks.
+
 When substantial work begins in an existing project, `learn-project` performs a lightweight orientation. It verifies documentation against implementation evidence and studies related repositories or external material only when the task needs them. Its maintained notes stay local under `.agents/knowledge/` and are excluded from Git.
 
 See the [approved skill catalog](skills/approved/choose-workflow/references/catalog.md) for every skill, its trigger, and what may call it.
