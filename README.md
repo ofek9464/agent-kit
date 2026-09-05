@@ -92,7 +92,7 @@ Use small-chunks for the rest of this conversation.
 Naming a user-started skill begins its workflow. Asking `choose-workflow` only gives a recommendation and waits for approval.
 
 <details>
-<summary>Technical reference for AI agents</summary>
+<summary><h2>Technical reference for AI agents ONLY</h2></summary>
 
 ### First use on a PC
 
