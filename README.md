@@ -48,10 +48,7 @@ The framework includes shared working rules for Codex and Claude Code. They tell
 
 - Write clear, natural prose while preserving your meaning, tone, and formatting.
 - Suggest one useful next skill when it would help, using the framework list and available project or plugin skills. A suggestion does not start a manual workflow.
-- Learn an unfamiliar project before substantial work and reuse context already established.
-- Check documentation against code, tests, and observed behavior instead of treating it as proof.
-- Keep its knowledge notes current, update project documentation within the scope you authorized, and respect read-only requests.
-- Ask when an answer would materially change the result. Otherwise state a reasonable assumption, continue, and remember permission already given.
+- Use [learn-project](skills/approved/learn-project/SKILL.md) before substantial project work when context is missing or stale. The skill contains the steps for checking evidence, maintaining notes, and handling uncertainty.
 
 Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/claude/CLAUDE.md). The installer adds them to each agent's personal instruction file.
 

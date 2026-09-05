@@ -13,7 +13,7 @@ Start with project instructions, repository status, structure, build files, entr
 
 Use the `how` skill when runtime flow or ownership needs tracing. Use `domain-modeling` when project terms conflict or a durable decision needs recording.
 
-Follow task-relevant links to accessible related repositories, issue history, vendor documentation, standards, hardware references, or current technical guidance. Prefer primary sources. Do not perform broad research that does not affect the task. Ask the user when missing access or ambiguity could materially change the result.
+Follow task-relevant links to accessible related repositories, issue history, vendor documentation, standards, hardware references, or current technical guidance. Prefer primary sources. Do not perform broad research that does not affect the task. Ask when missing access or ambiguity would materially change the result. Otherwise state a reasonable assumption and continue. Reuse authorization already given in the conversation instead of asking for it again.
 
 Store reusable findings locally under `.agents/knowledge/`. Before writing there, read [the knowledge format](references/knowledge-format.md). Apply `writing-for-agents` whenever creating or updating these files. Update existing knowledge instead of creating a new summary for every run.
 
