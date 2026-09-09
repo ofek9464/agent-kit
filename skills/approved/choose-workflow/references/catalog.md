@@ -6,7 +6,6 @@ This is the maintained list of approved Agent Kit skills. Manual skills start wh
 | --- | --- | --- |
 | [unslop](../../unslop/SKILL.md) | Make user-facing prose clear and natural | Global writing rule |
 | [clear-human-editor](../../clear-human-editor/SKILL.md) | Edit prose, organize long documents, and visually verify formatted files | Prose editing and document revision requests |
-| [create-3d-model](../../create-3d-model/SKILL.md) | Create, edit, animate, validate, and export 3D assets with Blender; includes 29 reference modules | 3D modeling and Blender asset requests |
 | [choose-workflow](../../choose-workflow/SKILL.md) | Choose a next skill or list the toolbox | Workflow questions |
 | [learn-project](../../learn-project/SKILL.md) | Build or refresh context before substantial project work | Missing or stale context |
 | [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | Reproduce a failure and trace its cause | Bug reports or diagnosis requests |

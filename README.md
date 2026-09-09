@@ -70,10 +70,6 @@ Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/cl
 
 [clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for long-document structure, avoiding repetition, and Hebrew/English Word layout. Formatted documents must be rendered and every page visually inspected before delivery; use the relevant document or PDF tools for those checks.
 
-[create-3d-model](skills/approved/create-3d-model/SKILL.md) creates and edits portable 3D assets from text, images, wireframes, and existing Blender scenes. It includes 29 reference modules and 26 Python helpers for modeling, materials, animation, reference fitting, validation, and export. It requires a separately configured BlenderMCP connection; the installer installs the skill, not Blender or its add-on.
-
-This toolkit contains personal skills and shared rules. Application-managed system skills and installed plugin skills remain managed by their providers and are not vendored here.
-
 When substantial work begins in an existing project, `learn-project` performs a lightweight orientation. It verifies documentation against implementation evidence and studies related repositories or external material only when the task needs them. Its maintained notes stay local under `.agents/knowledge/` and are excluded from Git.
 
 See the [approved skill catalog](skills/approved/choose-workflow/references/catalog.md) for every skill, its trigger, and what may call it.
