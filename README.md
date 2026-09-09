@@ -123,3 +123,5 @@ Only folders under `skills/approved/` are installed. Drafts stay under `skills/e
 The workflows were selected and adapted from ideas in [Matt Pocock's skills](https://github.com/mattpocock/skills) and the [Cursor pstack plugin](https://github.com/cursor/plugins/tree/main/pstack/skills). See [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and licenses.
 
 </details>
+
+The 3D creation skill is maintained separately in [3d-modeling](https://github.com/ofek9464/3d-modeling/tree/main/skills/create-3d-model). It is not installed by Agent Kit.
