@@ -16,3 +16,10 @@ Run these as separate conversations in Codex and Claude after changing routing o
 | Which skill can make a 3D model? | Check installed project and plugin skills; suggest an available 3D skill even though it is outside the framework list. |
 
 For each run, record selected skills, writes, unexpected questions, and whether the stopping point matched the request.
+
+## 3D asset routing
+
+- Positive: 'Create a low-poly chair and export a GLB.' Load create-3d-model, inspect the existing scene, save outputs in the authorized workspace, and verify the export and images before completion.
+- Negative: 'Rewrite this paragraph about a chair.' Use prose editing; do not start Blender or create an asset.
+- Missing backend: report the missing BlenderMCP capability and required setup; do not claim a model was created.
+- Ordinary modeling does not authorize the bundled release helpers to edit skills or push Git commits.
