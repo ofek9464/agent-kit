@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $implement to build and verify this approved specification."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

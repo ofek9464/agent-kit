@@ -20,7 +20,7 @@ The goal is simple: keep control of the process while giving agents reliable way
 
 A **skill** is an instruction package stored in a `SKILL.md` file. A **workflow** is the sequence of steps an agent follows. Some skills contain a complete workflow. Others provide one supporting part.
 
-User-started skills begin only when you name or approve them. They may call supporting skills, but you still control major changes to the work.
+Approved skills are available for automatic discovery. User-started skills begin when you request their workflow in natural language, name them, or approve a recommendation; a topic mention alone does not start them. They may call supporting skills, but you still control major changes to the work.
 
 ```text
 rough idea
@@ -68,7 +68,7 @@ Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/cl
 
 `choose-workflow` is the router. It recommends a user-started skill and waits for your approval. Supporting skills such as `domain-modeling`, `grilling`, `how`, `why`, `tdd`, and `code-review` provide reusable steps. `learn-project`, `diagnosing-bugs`, and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically. Ask `to-tasks` to split an agreed specification into tasks before implementation when the work needs a breakdown.
 
-[clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for long-document structure, avoiding repetition, and Hebrew/English Word layout. Formatted documents must be rendered and every page visually inspected before delivery; use the relevant document or PDF tools for those checks.
+[clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for long-document structure, avoiding repetition, and Hebrew/English Word layout. New formatted documents require rendering and visual inspection of every page. Recheck affected pages after local edits, and the whole document after global layout changes or when required; use the relevant document or PDF tools.
 
 When substantial work begins in an existing project, `learn-project` performs a lightweight orientation. It verifies documentation against implementation evidence and studies related repositories or external material only when the task needs them. Its maintained notes stay local under `.agents/knowledge/` and are excluded from Git.
 
@@ -124,4 +124,4 @@ The workflows were selected and adapted from ideas in [Matt Pocock's skills](htt
 
 </details>
 
-The 3D creation skill is maintained separately in [3d-modeling](https://github.com/ofek9464/3d-modeling/tree/main/skills/create-3d-model). It is not installed by Agent Kit.
+The 3D creation skill is maintained separately in [3d-modeling](https://github.com/ofek9464/3d-modeling/tree/main/skills/create-3d-model). It is not installed by Agent Kit. It exposes one skill entrypoint and 29 internal reference guides.

@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $codebase-teacher to teach me how this part of the project works."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

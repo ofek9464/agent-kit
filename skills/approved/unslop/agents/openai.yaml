@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $unslop to tighten this writing without changing its meaning."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 ---
 name: to-tasks
-description: Split an agreed specification or clear request into implementable tasks with dependencies and acceptance checks. Use when the user asks for a task breakdown; use to-spec when the requirements still need a specification.
+description: Break agreed requirements into tasks with dependencies and acceptance checks when the user asks for a task breakdown.
 ---
 
 # To tasks

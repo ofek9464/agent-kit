@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $course-teacher to teach me this topic across multiple sessions."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

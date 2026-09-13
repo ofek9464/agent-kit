@@ -12,7 +12,7 @@ State the single question the prototype must answer. Choose the smallest runnabl
 
 Put prototype files under `.scratch/prototypes/<short-name>/` unless the project already has a prototype convention. Mark them as disposable. Keep state in memory unless persistence is the question being tested.
 
-Skip production abstractions, broad error handling, and tests. Do not connect a visual prototype to live mutations. Never commit or merge prototype files unless the user asks.
+Skip production abstractions and broad error handling. Check that the prototype runs and answers its design question; use a small behavioral test only when it is the cheapest reliable evidence. Do not connect a visual prototype to live mutations. Never commit or merge prototype files unless the user asks.
 
 Include launch instructions and what to inspect. When the user reaches a verdict, record the question, the chosen answer, and the evidence. Production implementation remains a separate task.
 

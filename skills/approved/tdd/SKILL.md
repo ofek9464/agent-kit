@@ -17,6 +17,6 @@ For each small behavior:
 
 Use real collaborators when they are fast and deterministic. Mock only external systems, time, randomness, or genuinely slow boundaries. Avoid tests that merely repeat the implementation.
 
-For optional use, skip this skill when the only available test is expensive, unclear, flaky, or disconnected from the behavior. If the user explicitly requires TDD, explain the test limitation and settle an alternative before replacing test-first development.
+For optional use, skip this skill for reversible, low-impact edits with no meaningful behavioral risk, or when the only available test is expensive, unclear, flaky, or disconnected from the behavior. If the user explicitly requires TDD, explain the test limitation and settle an alternative before replacing test-first development.
 
 Completion means the new test would fail without the behavior and passes with it.

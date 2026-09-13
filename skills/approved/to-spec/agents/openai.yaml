@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $to-spec to turn our agreed discussion into a local implementation specification."
 
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true
