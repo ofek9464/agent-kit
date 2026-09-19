@@ -129,4 +129,6 @@ The workflows were selected and adapted from ideas in [Matt Pocock's skills](htt
 
 ### 2026-09-19
 
-Added UI Design Discovery for new interfaces and redesigns, with image alternatives and an optional lightweight mock-data artifact. Expanded workflow recommendations to project starts and emerging needs, and added a shared rule requiring dated patch notes before GitHub updates.
+- Added `ui-design-discovery` for new interfaces and redesigns, with image alternatives and an optional lightweight mock-data artifact.
+- Expanded proactive skill recommendations to project starts, emerging workflow needs, and phase transitions, including relevant user-started skills. A recommendation alone does not start a workflow; an existing user request can already authorize it.
+- Added a shared rule requiring dated `Patch notes` before GitHub updates, with each change described separately here.
