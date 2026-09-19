@@ -130,5 +130,5 @@ The workflows were selected and adapted from ideas in [Matt Pocock's skills](htt
 ### 2026-09-19
 
 - Added `ui-design-discovery` for new interfaces and redesigns, with image alternatives and an optional lightweight mock-data artifact.
-- Expanded proactive skill recommendations to project starts, emerging workflow needs, and phase transitions, including relevant user-started skills. A recommendation alone does not start a workflow; an existing user request can already authorize it.
+- Updated the global rules for Codex and Claude Code: agents now check for and recommend a useful skill, including manual skills, when starting a project, when a need arises during the conversation, or when moving to the next stage, without waiting for you to ask. For example, they can suggest `grill-me` to clarify a rough idea or `to-spec` to turn an agreed plan into a specification. A suggestion does not start the skill: the agent waits for your approval unless you have already requested that workflow, and skips recommendations that add no value.
 - Added a shared rule requiring dated `Patch notes` before GitHub updates, with each change described separately here.
