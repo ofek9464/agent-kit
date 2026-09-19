@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Design Discovery"
+  short_description: "Explore UI directions with images before implementation"
+  default_prompt: "Use $ui-design-discovery to clarify my interface needs and compare visual directions before implementation."

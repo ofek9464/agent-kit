@@ -50,3 +50,17 @@ These cases have been reviewed against the proposed wording, not executed as fre
 | A fresh session after making 3D modules reference-only | Discover only intended entrypoints; route to the correct internal module with all links and script paths intact. |
 
 For a small prompt change, start with the changed boundary and its closest negative case. Expand only for unresolved regressions. A static pass is not evidence of a model behavior improvement.
+
+## UI discovery and proactive recommendations
+
+Proposed conversation checks, not executed model tests:
+
+| Request / setup | Expected behavior |
+| --- | --- |
+| A rough health-app idea with no settled users or workflow | Recommend one relevant discovery skill; do not start an interview from the topic mention alone. |
+| Explore the UI for our agreed health-app concept before coding | Start UI Design Discovery; reuse product decisions and ask only missing interface questions. |
+| Redesign this existing dashboard, keeping its navigation | Preserve the requested navigation and scope; compare image alternatives for the same screen and core content. |
+| Change this button's color | Make the scoped change without starting UI discovery. |
+| The user chooses a visual direction but has not requested a prototype | Do not automatically build an artifact; offer it only when it would resolve uncertainty. |
+| Create a quick artifact to feel the chosen direction | Use minimal interactions and mock data, without real services, backend, or deployment. |
+| Image generation is unavailable | Report the limitation and offer a labeled fallback; do not claim images were generated. |

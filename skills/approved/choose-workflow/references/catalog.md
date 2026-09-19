@@ -6,12 +6,13 @@ This is the maintained list of approved Agent Kit skills. Manual skills start wh
 | --- | --- | --- |
 | [unslop](../../unslop/SKILL.md) | Make user-facing prose clear and natural | Global writing rule |
 | [clear-human-editor](../../clear-human-editor/SKILL.md) | Edit prose, organize long documents, and visually verify formatted files | Prose editing and document revision requests |
-| [choose-workflow](../../choose-workflow/SKILL.md) | Choose a next skill or list the toolbox | Workflow questions |
+| [choose-workflow](../../choose-workflow/SKILL.md) | Choose a next skill or list the toolbox | Project starts, emerging workflow needs, phase transitions, or workflow questions |
 | [learn-project](../../learn-project/SKILL.md) | Build or refresh context before substantial project work | Missing or stale context |
 | [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | Reproduce a failure and trace its cause | Bug reports or diagnosis requests |
 | [writing-for-agents](../../writing-for-agents/SKILL.md) | Create or revise instructions and skills | Agent-facing writing |
 | [grill-me](../../grill-me/SKILL.md) | Settle an idea without writing project files | Manual; uses [grilling](../../grilling/SKILL.md) |
 | [grill-with-docs](../../grill-with-docs/SKILL.md) | Settle a project design and record agreed decisions | Manual; uses [grilling](../../grilling/SKILL.md), [domain-modeling](../../domain-modeling/SKILL.md) |
+| [ui-design-discovery](../../ui-design-discovery/SKILL.md) | Agree a new or existing UI direction through questions, image alternatives, and an optional mock-data artifact | UI discovery requests or an accepted recommendation |
 | [to-spec](../../to-spec/SKILL.md) | Turn settled requirements into an implementation specification | Manual |
 | [to-tasks](../../to-tasks/SKILL.md) | Break agreed requirements into tasks with dependencies and checks | Task breakdown requests |
 | [prototype](../../prototype/SKILL.md) | Answer one design question with a disposable demo | Manual |

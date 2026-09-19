@@ -2,7 +2,9 @@
 
 For user-facing prose, apply `unslop` before sending. Preserve the requested tone, exact quotations, technical meaning, and required formatting. This rule does not apply to code, commands, logs, or tool output.
 
-At a meaningful transition, use `choose-workflow` to recommend one next skill only if it would materially help. Its framework list is `~/.claude/skills/choose-workflow/references/catalog.md`; read it when choosing a workflow and compare it with the session's available skills. Consider relevant project and plugin skills too. Give one concrete reason, and start a manual workflow only when the user requests it. Skip the suggestion when the next action is already clear.
+At the start of work on an idea or project, when a need emerges that a dedicated workflow could address, and at a change of work phase, use `choose-workflow` to check whether an available skill would materially help. Base the choice on what is already settled and what is missing, not keywords alone. Recommend at most one skill with a concrete reason tied to the current need, even if the user did not ask for a recommendation. An obvious next action is not a reason to skip this check.
+
+A recommendation does not authorize starting a workflow. If the user has already requested that workflow, including in natural language, read and use it within that authorization without asking again. Do not repeat an unchanged recommendation, interrupt an ongoing authorized workflow, or suggest a skill when it adds no value.
 
 Use `choose-workflow` when the user asks which skill fits or asks to list the toolbox. A recommendation alone does not start the suggested workflow.
 
@@ -12,3 +14,5 @@ Read the applicable SKILL.md before using a skill; reuse it once read in the cur
 If a named or required skill is missing from the exposed list, check its SKILL.md directly under the personal skills folder before declaring it unavailable. Personal skill folders can be directory links: use `rg --follow` when searching them, or read the exact path. In Codex check `$CODEX_HOME/skills` (default `~/.codex/skills`) and `~/.agents/skills`; in Claude Code check `~/.claude/skills`. Report a skill as used only after reading and applying its instructions.
 
 Carry authorized work through its applicable verification and corrections. A completion check is not a request for user approval. Reuse settled decisions and authorization; ask only for missing information or authority that changes the result, while continuing independent work. Preserve user-requested interviews, review boundaries, and user-paced modes.
+
+Before pushing changes to GitHub in any project, including Agent Kit, add or update a `Patch notes` section at the bottom of the repository README or main overview document. Each entry must include a date in YYYY-MM-DD format and one to three short sentences in English describing what was added or changed. Include the entry with the changes being pushed; reuse an existing entry when retrying the same push. This rule does not itself authorize a commit or push.

@@ -58,6 +58,7 @@ Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/cl
 | --- | --- |
 | `grill-me` | Questions a rough idea until the important choices are clear |
 | `grill-with-docs` | Clarifies a project idea and records terms and decisions |
+| `ui-design-discovery` | Explore a new or existing UI through questions, image alternatives, and an optional mock-data artifact |
 | `to-spec` | Turns an agreed discussion into a buildable specification |
 | `prototype` | Builds a disposable experiment to answer a design question |
 | `implement` | Builds an approved spec, tests it, and reviews the result |
@@ -66,7 +67,7 @@ Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/cl
 | `codebase-teacher` | Explains an existing project or change |
 | `small-chunks` | Keeps the conversation to one user-paced step at a time |
 
-`choose-workflow` is the router. It recommends a user-started skill and waits for your approval. Supporting skills such as `domain-modeling`, `grilling`, `how`, `why`, `tdd`, and `code-review` provide reusable steps. `learn-project`, `diagnosing-bugs`, and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically. Ask `to-tasks` to split an agreed specification into tasks before implementation when the work needs a breakdown.
+`choose-workflow` is the router. It considers useful skills at project start, when a workflow need emerges, and at phase transitions. Recommendations do not start a workflow; an existing user request can already authorize it. Supporting skills such as `domain-modeling`, `grilling`, `how`, `why`, `tdd`, and `code-review` provide reusable steps. `learn-project`, `diagnosing-bugs`, and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically. Ask `to-tasks` to split an agreed specification into tasks before implementation when the work needs a breakdown.
 
 [clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for long-document structure, avoiding repetition, and Hebrew/English Word layout. New formatted documents require rendering and visual inspection of every page. Recheck affected pages after local edits, and the whole document after global layout changes or when required; use the relevant document or PDF tools.
 
@@ -123,3 +124,9 @@ Only folders under `skills/approved/` are installed. Drafts stay under `skills/e
 The workflows were selected and adapted from ideas in [Matt Pocock's skills](https://github.com/mattpocock/skills) and the [Cursor pstack plugin](https://github.com/cursor/plugins/tree/main/pstack/skills). See [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and licenses.
 
 </details>
+
+## Patch notes
+
+### 2026-09-19
+
+Added UI Design Discovery for new interfaces and redesigns, with image alternatives and an optional lightweight mock-data artifact. Expanded workflow recommendations to project starts and emerging needs, and added a shared rule requiring dated patch notes before GitHub updates.
