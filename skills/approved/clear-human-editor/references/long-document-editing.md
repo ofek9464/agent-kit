@@ -31,7 +31,7 @@ Correct facts are not enough. A passage can remain stiff when it reads like an a
 - Prefer an actor and an action when the actor matters. Use passive voice only when the process or result matters more than who performed it.
 - Replace report-production commentary such as "this distinction is important for verification" with the concrete consequence for the experiment or reader.
 - Remove claims about preserving a "story," improving the report, or making the document complete. State the methodological decision itself.
-- Do not make the prose casual, decorative, emotional, or artificially imperfect in an attempt to sound human.
+- Preserve warmth, distinctive language, and documented reactions when they fit the authors and register. Do not manufacture emotions, anecdotes, casualness, or imperfections to sound human. For reader context and authorial voice, use [reader-and-voice.md](reader-and-voice.md).
 
 Read adjacent paragraphs as a sequence after editing. If they could be reordered without changing the argument, strengthen the logical progression or remove the paragraph that adds no distinct contribution.
 

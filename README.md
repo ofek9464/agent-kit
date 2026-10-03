@@ -47,7 +47,7 @@ The repository has four reusable parts:
 The framework includes shared working rules for Codex and Claude Code. They tell the agent to:
 
 - Write clear, natural prose while preserving your meaning, tone, and formatting.
-- Suggest one useful next skill when it would help, using the framework list and available project or plugin skills. A suggestion does not start a manual workflow.
+- Suggest one useful primary workflow when it would help, using the framework list and available project or plugin skills. Combine applicable supporting skills within authorized work; a suggestion does not start a manual workflow.
 - Use [learn-project](skills/approved/learn-project/SKILL.md) before substantial project work when context is missing or stale. The skill contains the steps for checking evidence, maintaining notes, and handling uncertainty.
 
 Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/claude/CLAUDE.md). The installer adds them to each agent's personal instruction file.
@@ -69,7 +69,11 @@ Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/cl
 
 `choose-workflow` is the router. It considers useful skills at project start, when a workflow need emerges, and at phase transitions. Recommendations do not start a workflow; an existing user request can already authorize it. Supporting skills such as `domain-modeling`, `grilling`, `how`, `why`, `tdd`, and `code-review` provide reusable steps. `learn-project`, `diagnosing-bugs`, and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically. Ask `to-tasks` to split an agreed specification into tasks before implementation when the work needs a breakdown.
 
-[clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for long-document structure, avoiding repetition, and Hebrew/English Word layout. New formatted documents require rendering and visual inspection of every page. Recheck affected pages after local edits, and the whole document after global layout changes or when required; use the relevant document or PDF tools.
+[academic-presentations](skills/approved/academic-presentations/SKILL.md) prepares editable coursework and project-defense decks. It asks a short discovery round, plans slide count from speaking time, and shows the sequence and designed samples before full production; it combines the host's available presentation tools.
+
+[clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for reader context, authorial voice, developing reasoning, long-document structure, avoiding repetition, and Hebrew/English Word layout. New formatted documents require rendering and visual inspection of every page. Recheck affected pages after local edits, and the whole document after global layout changes or when required; use the relevant document or PDF tools.
+
+[cv-editor](skills/approved/cv-editor/SKILL.md) drafts and tailors CVs from verified career evidence. It combines clear-human-editor with the chosen document or Canva workflow, separates certifications from training, and verifies that the final candidate-specific result is saved.
 
 When substantial work begins in an existing project, `learn-project` performs a lightweight orientation. It verifies documentation against implementation evidence and studies related repositories or external material only when the task needs them. Its maintained notes stay local under `.agents/knowledge/` and are excluded from Git.
 
@@ -132,3 +136,21 @@ The workflows were selected and adapted from ideas in [Matt Pocock's skills](htt
 - Added `ui-design-discovery` for new interfaces and redesigns, with image alternatives and an optional lightweight mock-data artifact.
 - Updated the global rules for Codex and Claude Code: agents now check for and recommend a useful skill, including manual skills, when starting a project, when a need arises during the conversation, or when moving to the next stage, without waiting for you to ask. For example, they can suggest `grill-me` to clarify a rough idea or `to-spec` to turn an agreed plan into a specification. A suggestion does not start the skill: the agent waits for your approval unless you have already requested that workflow, and skips recommendations that add no value.
 - Added a shared rule requiring dated `Patch notes` before GitHub updates, with each change described separately here.
+
+### 2026-09-30
+
+- Clarified that one workflow recommendation can use multiple supporting skills within the authorized scope.
+- Refined prose editing to scale planning to the change, preserve technical meaning and reproducibility details, and adapt voice and Word layout to the document. Removed a blanket project-book planning approval gate.
+- Added proposed checks for skill composition, scoped editing, terminology, and caption placement.
+- Added a shared preference for grouped popup questions with concise choices and free-text input when supported.
+- Added `academic-presentations` for editable academic decks, with grouped discovery questions, duration-based pacing, and designed samples before full production.
+- Expanded clear-human-editor with reader context, supported authorial voice, reasoning development, and sequential reading checks. Added illustrative Hebrew examples and proposed behavioral checks while preserving edit scope and factual safeguards. Refined concrete wording, vague evaluations, precise measure definitions, paragraph density, and author-approved voice samples. Recorded the author's Hebrew motivation and controller-comparison voice samples, including practical tradeoffs, progressive reasoning, and evidence limits. Refined technical labels and refreshes of the editorial plan before whole-document rewrites.
+
+### 2026-10-02
+
+- Recreated cv-editor after its original source was found missing, and restored local Codex and Claude skill links. Added CV-specific evidence checks, credential distinctions, confidential project naming, and saved-artifact verification.
+- Expanded cv-editor with a reusable career evidence record, job requirement mapping, scale discovery, and final readability, link, and PDF text checks. Kept the chosen template and excluded heuristic ATS scores and mandatory quantification.
+
+### 2026-10-03
+
+Published the updated academic presentation, human editing, and CV workflows, including reusable career evidence and final artifact checks. Updated shared skill composition and popup-question guidance for Codex and Claude.

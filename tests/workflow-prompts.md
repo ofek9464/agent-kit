@@ -64,3 +64,22 @@ Proposed conversation checks, not executed model tests:
 | The user chooses a visual direction but has not requested a prototype | Do not automatically build an artifact; offer it only when it would resolve uncertainty. |
 | Create a quick artifact to feel the chosen direction | Use minimal interactions and mock data, without real services, backend, or deployment. |
 | Image generation is unavailable | Report the limitation and offer a labeled fallback; do not claim images were generated. |
+
+## Skill composition and prose editing
+
+Proposed conversation checks, not executed model tests. Run with the same host, model, tools, source material, and request when comparing old and new guidance.
+
+| Request / setup | Expected behavior |
+| --- | --- |
+| "Edit this Hebrew Word report and verify its layout." | Combine clear-human-editor, the applicable document skill, and unslop; preserve scope and verify the saved output. |
+| "Which skill should I use to edit a report?" | Recommend one primary workflow; do not begin editing or start unrelated workflows. |
+| "Tighten this paragraph in chapter 4." | Inspect the passage and nearby transitions; do not require a plan or approval for every chapter. |
+| "Rewrite this chapter, preserving its structure." | Plan internally as needed and complete authorized editing; no automatic planning approval gate. |
+| "Show me the plan before you rewrite." | Present the plan and wait as requested. |
+| A proposed rewrite materially changes the agreed structure or content | Obtain the missing decision before making that change; continue independent authorized work. |
+| A technical text distinguishes traffic demand from observed traffic | Preserve the distinction and simplify surrounding prose; do not replace terms with inaccurate synonyms. |
+| A method cites a script, version, or hash needed to reproduce a result | Preserve the detail in an appropriate location; remove only irrelevant production bookkeeping. |
+| A single-author report requires an impersonal register | Preserve that register; do not introduce "we." |
+| A short Hebrew memo has Heading 1 sections | Follow the memo template; do not force each section onto a new page. |
+| Captions appear both above and below objects | Apply keep controls according to placement and inspect the rendered association with each object. |
+| A local edit follows prior full visual inspection | Reinspect changed and affected pages; repeat full inspection for broad changes, uncertain impact, or an explicit user requirement. |

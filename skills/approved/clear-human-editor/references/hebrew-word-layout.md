@@ -29,18 +29,17 @@ Read this reference when creating or editing a Hebrew `.docx`, especially when H
 - Update all fields after pagination changes. Check that every displayed page number points to the actual item.
 - A partial draft may use temporary lists only when the user agrees. Label them as temporary rather than reporting them as updated automatic fields.
 
+## Pagination
+
+- Follow the required template and document type for page breaks. In a project book that requires chapters or front-matter sections to start on new pages, apply "page break before" to the appropriate styles; do not impose this on every Hebrew document or every Heading 1.
+- Keep captions with their figures or tables. For a caption above the object, use "keep with next" on the caption. For a caption below an inline figure, use it on the figure paragraph. For tables or floating objects, use the layout controls appropriate to the document tool and verify the rendered placement. Keep headings with the following paragraph.
+- Do not leave a table split across pages without a repeated header row.
+- Avoid a page that holds only one line of a paragraph (widow/orphan control on).
+
 ## Visual verification
 
-Render the complete document after editing. Inspect every page at readable size, with extra attention to:
+Apply [visual delivery](visual-delivery.md) for inspection coverage and repeat checks. For a new document, inspect every page; after a local edit, inspect changed pages and pages affected by reflow, references, or numbering. Inspect every page again after broad style, direction, field, equation, or pagination changes, when impact is uncertain, or when the user requires it.
 
-- the table of contents and lists;
-- mixed Hebrew-English headings and paragraphs;
-- captions and cross-references;
-- tables, formulas, filenames, and citations;
-- the first and last lines of pages where reflow can expose direction errors.
+Pay extra attention to generated lists, mixed Hebrew-English text, captions, cross-references, tables, formulas, filenames, citations, and page boundaries.
 
-Structural checks are useful but do not replace visual inspection. Completion requires both correct document properties and a readable rendered result.
-
-The agent must actually open the rendered page images and look at them. A renderer exit code, generated PDF, extracted text, accessibility report, field count, or RTL property count does not establish that the document is visually correct. If even one page has not been viewed, the document has not passed visual verification.
-
-After any correction that can change pagination or layout, render again and re-inspect all affected pages; for broad style, direction, field, or equation changes, re-inspect every page. If rendering cannot be completed, label the output as an unverified draft and never say that it is ready.
+Actually open the rendered page images at readable size. A renderer exit code, generated PDF, extracted text, or direction-property count does not establish visual correctness. Fix defects and inspect the saved revision again under the shared policy. Report the exact verification limitation when rendering or image inspection is unavailable; preserve any explicit user requirement for verified layout.

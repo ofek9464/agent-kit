@@ -15,7 +15,7 @@ Consider installed project and plugin skills when they fit better. Use their act
 
 If the user asks to list the toolbox, show the catalog briefly and group skills by invocation mode.
 
-Otherwise, match the request to the narrowest useful skill. Recommend one skill with one concrete reason and show how to invoke it in the current agent. Ask a follow-up question only when different answers would select different workflows.
+Otherwise, match the request to the narrowest useful primary skill. Apply the shared personal rule for combining supporting skills within authorized work; recommending one primary workflow does not limit execution to one skill. Recommend one skill with one concrete reason and show how to invoke it in the current agent. Ask a follow-up question only when different answers would select different workflows.
 
 A recommendation alone does not authorize starting a manual skill. If the user has already requested that workflow, including in natural language, read and use it without asking for the same authorization again. Do not repeat an unchanged recommendation or interrupt an ongoing authorized workflow. If no skill adds real value, omit a proactive suggestion; for a direct workflow question, say that no special skill is needed.
 

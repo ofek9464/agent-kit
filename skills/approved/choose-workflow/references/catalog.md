@@ -1,11 +1,13 @@
 # Framework skill list
 
-This is the maintained list of approved Agent Kit skills. Manual skills start when the user requests them. Supporting skills can be called directly or used within authorized work. Check actual availability before making a recommendation.
+This is the maintained list of approved Agent Kit skills. Manual skills start when the user requests them. Supporting skills can be called directly or combined with a primary skill within authorized work. The one-recommendation limit does not limit the number of applicable skills used. Check actual availability before making a recommendation.
 
 | Skill | When it helps | Starts |
 | --- | --- | --- |
 | [unslop](../../unslop/SKILL.md) | Make user-facing prose clear and natural | Global writing rule |
-| [clear-human-editor](../../clear-human-editor/SKILL.md) | Edit prose, organize long documents, and visually verify formatted files | Prose editing and document revision requests |
+| [clear-human-editor](../../clear-human-editor/SKILL.md) | Edit prose for its reader and authorial voice, organize long documents, and visually verify formatted files | Prose editing and document revision requests |
+| [cv-editor](../../cv-editor/SKILL.md) | Draft, revise, or tailor CVs using verified career evidence and the chosen format | CV and resume requests |
+| [academic-presentations](../../academic-presentations/SKILL.md) | Plan and create editable coursework and project-defense decks with timing and designed samples | Academic presentation requests or an accepted recommendation |
 | [choose-workflow](../../choose-workflow/SKILL.md) | Choose a next skill or list the toolbox | Project starts, emerging workflow needs, phase transitions, or workflow questions |
 | [learn-project](../../learn-project/SKILL.md) | Build or refresh context before substantial project work | Missing or stale context |
 | [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | Reproduce a failure and trace its cause | Bug reports or diagnosis requests |

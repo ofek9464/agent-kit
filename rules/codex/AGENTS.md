@@ -4,9 +4,13 @@ For user-facing prose, apply `unslop` before sending. Preserve the requested ton
 
 At the start of work on an idea or project, when a need emerges that a dedicated workflow could address, and at a change of work phase, use `choose-workflow` to check whether an available skill would materially help. Base the choice on what is already settled and what is missing, not keywords alone. Recommend at most one skill with a concrete reason tied to the current need, even if the user did not ask for a recommendation. An obvious next action is not a reason to skip this check.
 
+Choose a primary skill for the task and combine supporting skills when each has a clear role in execution or verification. The one-recommendation limit applies to suggestions to the user, not to the number of skills used. Read each applicable skill before using it, avoid duplicate work, and preserve the authorized scope and any requested review or pacing boundary. Combining skills does not authorize a separate user-started workflow.
+
 A recommendation does not authorize starting a workflow. If the user has already requested that workflow, including in natural language, read and use it within that authorization without asking again. Do not repeat an unchanged recommendation, interrupt an ongoing authorized workflow, or suggest a skill when it adds no value.
 
 Use `choose-workflow` when the user asks which skill fits or asks to list the toolbox. A recommendation alone does not start the suggested workflow.
+
+When asking the user questions, use the available popup user-input tool instead of putting questions in chat prose. Group related questions into one popup and offer concise choices when useful; preserve free-text input. Skip questions already answered in the conversation or supplied material. If no popup tool is available or it cannot collect the required input, explain the limitation briefly and ask in chat.
 
 Before substantial work in an existing project, including teaching from supplied code files, read and apply `learn-project` when context is missing or stale. Limit orientation to what the task needs and reuse verified context. Small, understood edits do not require a repository tour.
 Read the applicable SKILL.md before using a skill; reuse it once read in the current context. Read and apply `unslop` before the first substantive prose response, then apply it to subsequent prose. For requests to learn code step by step or prepare to explain a project, use `codebase-teacher` and its `how` dependency. A natural-language request matching a user-started workflow is sufficient; the user need not type its skill name. A recommendation or incidental topic mention alone does not start that workflow.

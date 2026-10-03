@@ -1,0 +1,6 @@
+interface:
+  display_name: "CV Editor"
+  short_description: "Write and tailor CVs from verified career evidence"
+  default_prompt: "Use $cv-editor to improve my CV for the target role while preserving verified facts and my chosen format."
+policy:
+  allow_implicit_invocation: true

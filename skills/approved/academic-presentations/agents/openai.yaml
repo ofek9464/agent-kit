@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Presentations"
+  short_description: "Plan and design editable academic presentations"
+  default_prompt: "Use $academic-presentations to clarify my audience, speaking time, text density, and design preferences; show the slide sequence and designed samples before creating the full editable deck."

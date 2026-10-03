@@ -31,6 +31,17 @@ For academic and technical documents, human voice means clear judgment, concrete
 - Remove false ranges phrased as "from X to Y" when the items do not form a real scale.
 - Replace abstract technical-sounding metaphors with the concrete mechanism or object.
 
+## Hebrew equivalents
+
+Stock phrases that make Hebrew prose sound machine-written. Cut them or replace them with the actual point:
+
+- Filler openers: "חשוב לציין ש", "חשוב לשים לב ש", "חשוב לזכור ש", "ראוי להדגיש", "יש לציין".
+- Stacked connectors: "יתרה מזאת", "בנוסף לכך", "כמו כן" at the start of consecutive sentences.
+- Inflated verbs and nouns: "מהווה" (write "הוא"), "הלכה למעשה", "באופן משמעותי" without a number, "פלטפורמה", "חדשני", "מרתק".
+- Closing announcements: "בזה מסתיים...", "לסיכום ניתן לומר ש".
+- Repeated "כלומר": remove it when the sentence already explains the point; retain it when it marks a useful clarification.
+- A colon after every other clause. Use it to introduce a list or an example, not as the default joint between sentences.
+
 ## Style
 
 - Avoid em dashes. Split the sentence or use ordinary punctuation.
