@@ -9,6 +9,7 @@ This is the maintained list of approved Agent Kit skills. Manual skills start wh
 | [cv-editor](../../cv-editor/SKILL.md) | Draft, revise, or tailor CVs using verified career evidence and the chosen format | CV and resume requests |
 | [academic-presentations](../../academic-presentations/SKILL.md) | Plan and create editable coursework and project-defense decks with timing and designed samples | Academic presentation requests or an accepted recommendation |
 | [choose-workflow](../../choose-workflow/SKILL.md) | Choose a next skill or list the toolbox | Project starts, emerging workflow needs, phase transitions, or workflow questions |
+| [find-skills](../../find-skills/SKILL.md) | Find and review external skills after checking the installed toolbox | Explicit external discovery requests or a concrete capability gap routed by choose-workflow; installation needs authorization |
 | [learn-project](../../learn-project/SKILL.md) | Build or refresh context before substantial project work | Missing or stale context |
 | [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | Reproduce a failure and trace its cause | Bug reports or diagnosis requests |
 | [writing-for-agents](../../writing-for-agents/SKILL.md) | Create or revise instructions and skills | Agent-facing writing |

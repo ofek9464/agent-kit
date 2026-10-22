@@ -69,6 +69,8 @@ Read the full rules for [Codex](rules/codex/AGENTS.md) or [Claude Code](rules/cl
 
 `choose-workflow` is the router. It considers useful skills at project start, when a workflow need emerges, and at phase transitions. Recommendations do not start a workflow; an existing user request can already authorize it. Supporting skills such as `domain-modeling`, `grilling`, `how`, `why`, `tdd`, and `code-review` provide reusable steps. `learn-project`, `diagnosing-bugs`, and `writing-for-agents` activate when a task matches them. `unslop` cleans up user-facing prose automatically. Ask `to-tasks` to split an agreed specification into tasks before implementation when the work needs a breakdown.
 
+[find-skills](skills/approved/find-skills/SKILL.md) adapts Vercel's external skill discovery. It checks the installed toolbox first, searches when you request external options or a concrete capability is missing, and reviews candidate instructions and supporting files before recommending one. Searching does not authorize installation; reviewed personal additions stay in Agent Kit so Codex and Claude share the same source.
+
 [academic-presentations](skills/approved/academic-presentations/SKILL.md) prepares editable coursework and project-defense decks. It asks a short discovery round, plans slide count from speaking time, and shows the sequence and designed samples before full production; it combines the host's available presentation tools.
 
 [clear-human-editor](skills/approved/clear-human-editor/SKILL.md) edits prose while preserving meaning and evidence. It includes guidance for reader context, authorial voice, developing reasoning, long-document structure, avoiding repetition, and Hebrew/English Word layout. New formatted documents require rendering and visual inspection of every page. Recheck affected pages after local edits, and the whole document after global layout changes or when required; use the relevant document or PDF tools.
@@ -154,3 +156,11 @@ The workflows were selected and adapted from ideas in [Matt Pocock's skills](htt
 ### 2026-10-03
 
 Published the updated academic presentation, human editing, and CV workflows, including reusable career evidence and final artifact checks. Updated shared skill composition and popup-question guidance for Codex and Claude.
+
+### 2026-10-20
+
+Added a Vercel-based find-skills workflow and connected it to choose-workflow for explicit external searches and concrete gaps in installed capabilities. Candidates are reviewed before recommendation, and installation preserves the selected scope and shared Agent Kit links.
+
+### 2026-10-22
+
+Validated external skill discovery with independent routing and candidate-inspection checks, plus isolated installation tests for Codex and Claude. Recorded the results, standalone CLI model/authentication limitations, and remaining conversation checks in tests/find-skills-results.md.
